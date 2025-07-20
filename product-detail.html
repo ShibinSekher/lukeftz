@@ -351,46 +351,79 @@
 	<section class="sec-product-detail bg0 p-t-65 p-b-60">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-lg-7 p-b-30">
-					<div class="p-l-25 p-r-30 p-lr-0-lg">
-						<div class="wrap-slick3 flex-sb flex-w">
-							<div class="wrap-slick3-dots"></div>
-							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+				<div class="col-md-6 col-lg-7 p-b-30" id="product-images-container">
+					<!-- Images will be injected here by JS -->
+				</div>
+				<script>
+					// Dummy products array for demo
+					function openProductDB() {
+						return new Promise((resolve, reject) => {
+							const request = indexedDB.open("ProductDB", 1);
+							request.onupgradeneeded = function(event) {
+								const db = event.target.result;
+								if (!db.objectStoreNames.contains("products")) {
+									db.createObjectStore("products", { keyPath: "id" });
+								}
+							};
+							request.onsuccess = function(event) {
+								resolve(event.target.result);
+							};
+							request.onerror = function(event) {
+								reject(event.target.error);
+							};
+						});
+					}
 
-							<div class="slick3 gallery-lb">
-								<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
-									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+					async function getProductsFromDB() {
+						const db = await openProductDB();
+						return new Promise((resolve, reject) => {
+							const tx = db.transaction("products", "readonly");
+							const store = tx.objectStore("products");
+							const products = [];
+							const request = store.openCursor();
+							request.onsuccess = function(e) {
+								const cursor = e.target.result;
+								if (cursor) {
+									products.push(cursor.value);
+									cursor.continue();
+								} else {
+									resolve(products);
+								}
+							};
+							request.onerror = function(e) {
+								reject(e.target.error);
+							};
+						});
+					}
 
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
-											<i class="fa fa-expand"></i>
-										</a>
-									</div>
-								</div>
-
-								<div class="item-slick3" data-thumb="images/product-detail-02.jpg">
-									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
-											<i class="fa fa-expand"></i>
-										</a>
-									</div>
-								</div>
-
-								<div class="item-slick3" data-thumb="images/product-detail-03.jpg">
-									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
-											<i class="fa fa-expand"></i>
-										</a>
+					getProductsFromDB().then(products => {
+						const urlParams = new URLSearchParams(window.location.search);
+						const productId = parseInt(urlParams.get('id'));
+						const product = products.find(p => p.id === productId);
+						if (!product) return;
+						// Use the requested HTML design, but fill images dynamically
+						let imagesHtml = `
+							<div class="col-md-6 col-lg-7 p-b-30">
+								<div class="p-l-25 p-r-30 p-lr-0-lg">
+									<div class="wrap-slick3 flex-sb flex-w">
+										<!-- Main Image -->
+										<div class="main-image" style="text-align:center;">
+											<img id="main-product-image" src="${product.detailsImages[0]}" alt="IMG-PRODUCT" style="max-width:100%;height:auto;">
+										</div>
+										<!-- Thumbnails -->
+										<div class="thumbnails flex-w flex-t m-t-20" style="justify-content:center;">
+											${product.detailsImages.map((img, idx) => `
+												<img src="${img}" alt="IMG-PRODUCT" class="product-thumb" style="width:80px;height:80px;object-fit:cover;margin:0 5px;cursor:pointer;border:${idx===0?'2px solid #222;':'1px solid #ccc;'}" onclick="document.getElementById('main-product-image').src='${img}';document.querySelectorAll('.product-thumb').forEach(e=>e.style.border='1px solid #ccc');this.style.border='2px solid #222';">
+											`).join('')}
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
+						`;
+						document.getElementById('product-images-container').outerHTML = imagesHtml;
+					});
+				</script>
+				
 					
 				<div class="col-md-6 col-lg-5 p-b-30">
 					<div class="p-r-50 p-t-5 p-lr-0-lg">

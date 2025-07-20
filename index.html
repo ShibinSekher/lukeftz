@@ -1705,6 +1705,37 @@
 							</li>
 						</ul>
 						<div class="red_button deal_ofthe_week_button"><a href="categories.html">shop now</a></div>
+						<script>
+							// Set the date we're counting down to (example: 3 days from now)
+							var countDownDate = new Date();
+							countDownDate.setDate(countDownDate.getDate() + 3);
+							countDownDate.setHours(countDownDate.getHours() + 15);
+							countDownDate.setMinutes(countDownDate.getMinutes() + 45);
+							countDownDate.setSeconds(countDownDate.getSeconds() + 23);
+
+							var timerInterval = setInterval(function () {
+								var now = new Date().getTime();
+								var distance = countDownDate.getTime() - now;
+
+								var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+								var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+								var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+								document.getElementById("day").innerHTML = days < 10 ? "0" + days : days;
+								document.getElementById("hour").innerHTML = hours < 10 ? "0" + hours : hours;
+								document.getElementById("minute").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+								document.getElementById("second").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+								if (distance < 0) {
+									clearInterval(timerInterval);
+									document.getElementById("day").innerHTML = "00";
+									document.getElementById("hour").innerHTML = "00";
+									document.getElementById("minute").innerHTML = "00";
+									document.getElementById("second").innerHTML = "00";
+								}
+							}, 1000);
+						</script>
 					</div>
 				</div>
 			</div>
@@ -1713,96 +1744,128 @@
 
 	<!-- # testimonials
         ================================================== -->
-	<section id="testimonials" class="container s-testimonials">
-
-		<div class="row s-testimonials__content">
-			<div class="column xl-12">
-
-				<h3 class="testimonials-title u-text-center">What Our Clients Say</h3>
-
-				<div class="swiper-container testimonials-slider">
-					<div class="swiper-wrapper">
-
-						<div class="testimonials-slider__slide swiper-slide">
-							<div class="testimonials-slider__author">
-								<img src="images/avatars/user-02.jpg" alt="Author image"
-									class="testimonials-slider__avatar">
-								<cite class="testimonials-slider__cite">
-									John Rockefeller
-									<span>Cleveland, Ohio</span>
-								</cite>
+	<!-- Simple Testimonials Slider -->
+	<section id="testimonials" class="container py-5">
+		<div class="p-b-10">
+			<h3 class="ltext-103 cl5">
+				What Our Clients Say
+			</h3>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<div id="testimonialSlider" class="carousel slide" data-ride="carousel" data-interval="false">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="row text-center">
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Great service and fast delivery!"</p>
+										<span class="text-muted small">- John Doe</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Quality products at good prices."</p>
+										<span class="text-muted small">- Jane Smith</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Customer support was very helpful."</p>
+										<span class="text-muted small">- Alex Brown</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Fast shipping and great quality."</p>
+										<span class="text-muted small">- Emily White</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Very satisfied with my purchase."</p>
+										<span class="text-muted small">- Michael Green</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Excellent customer service."</p>
+										<span class="text-muted small">- Sarah Lee</span>
+									</div>
+								</div>
 							</div>
-							<p>
-								Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
-								Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat
-								fuga rem nihil nostrum.
-								Laudantium quia consequatur molestias.
-							</p>
-						</div> <!-- end testimonials-slider__slide -->
-
-						<div class="testimonials-slider__slide swiper-slide">
-							<div class="testimonials-slider__author">
-								<img src="images/avatars/user-03.jpg" alt="Author image"
-									class="testimonials-slider__avatar">
-								<cite class="testimonials-slider__cite">
-									Andrew Carnegie
-									<span>Pittsburgh, Pennsylvania</span>
-								</cite>
+						</div>
+						<div class="carousel-item">
+							<div class="row text-center">
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Easy to order and quick delivery."</p>
+										<span class="text-muted small">- Chris Paul</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Great deals and discounts."</p>
+										<span class="text-muted small">- Lisa Ray</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Will shop again!"</p>
+										<span class="text-muted small">- Tom Hardy</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Loved the products."</p>
+										<span class="text-muted small">- Anna Bell</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Highly recommended."</p>
+										<span class="text-muted small">- Steve Jobs</span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="testimonial-box">
+										<img src="images/avatar.png" class="rounded-circle mb-3" width="80" height="80" alt="User">
+										<p class="small mb-1">"Great experience overall."</p>
+										<span class="text-muted small">- Mark Twain</span>
+									</div>
+								</div>
 							</div>
-							<p>
-								Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat
-								voluptas animi adipisci.
-								Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-								Quasi voluptas eius distinctio. Atque eos maxime.
-							</p>
-						</div> <!-- end testimonials-slider__slide -->
-
-						<div class="testimonials-slider__slide swiper-slide">
-							<div class="testimonials-slider__author">
-								<img src="images/avatars/user-01.jpg" alt="Author image"
-									class="testimonials-slider__avatar">
-								<cite class="testimonials-slider__cite">
-									John Morgan
-									<span>New York City</span>
-								</cite>
-							</div>
-							<p>
-								Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia
-								nesciunt. Ducimus aut sed ipsam.
-								Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius
-								distinctio.
-								Voluptatem dignissimos ut.
-							</p>
-						</div> <!-- end testimonials-slider__slide -->
-
-						<div class="testimonials-slider__slide swiper-slide">
-							<div class="testimonials-slider__author">
-								<img src="images/avatars/user-06.jpg" alt="Author image"
-									class="testimonials-slider__avatar">
-								<cite class="testimonials-slider__cite">
-									Henry Ford
-									<span>Dearborn, Michigan</span>
-								</cite>
-							</div>
-							<p>
-								Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In
-								ac felis
-								quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti
-								expedita voluptas odit.
-								Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-							</p>
-						</div> <!-- end testimonials-slider__slide -->
-
-					</div> <!-- end swiper-wrapper -->
-
-					<div class="swiper-pagination"></div>
-
-				</div> <!-- end testimonials-slider -->
-
-			</div> <!-- end column -->
-		</div> <!-- end s-testimonials__content -->
-
-	</section> <!-- end s-testimonials -->
+						</div>
+						<!-- Add more carousel-item blocks for more testimonials if needed -->
+					</div>
+					<a class="carousel-control-prev custom-carousel-arrow" href="#testimonialSlider" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next custom-carousel-arrow" href="#testimonialSlider" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		$(document).ready(function () {
+			$('#testimonialSlider').carousel();
+		});
+	</script>
 
 	<!-- WhatsApp Icon -->
 	<div class="whatsapp-float">

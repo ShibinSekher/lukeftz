@@ -3890,4 +3890,57 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 
-/* ===================================================================
+.red_button a {
+    display: block;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+}
+#testimonialSlider .custom-carousel-arrow {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+#testimonialSlider .custom-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 1;
+}
+
+#testimonialSlider .carousel-control-prev-icon,
+#testimonialSlider .carousel-control-next-icon {
+  background-size: 60% 60%;
+  width: 24px;
+  height: 24px;
+  filter: invert(1) drop-shadow(0 0 2px #222);
+}
+
+#testimonialSlider .carousel-control-prev {
+  left: -50px;
+}
+
+#testimonialSlider .carousel-control-next {
+  right: -50px;
+}
+
+@media (max-width: 768px) {
+
+  #testimonialSlider .carousel-control-prev,
+  #testimonialSlider .carousel-control-next {
+    left: 0;
+    right: 0;
+  }
+}
+

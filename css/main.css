@@ -3537,3 +3537,357 @@ input.num-product::-webkit-inner-spin-button {
   font-size: 15px;
   color: #999998;
 }
+
+/*********************************
+6. Deal of the week
+*********************************/
+
+.deal_ofthe_week
+{
+	width: 100%;
+	margin-top: 41px;
+	background: #f2f2f2;
+}
+.deal_ofthe_week_img
+{
+	height: 540px;
+}
+.deal_ofthe_week_img img
+{
+	height: 100%;
+}
+.deal_ofthe_week_content
+{
+	height: 100%;
+}
+.section_title
+{
+	display: inline-block;
+	text-align: center;
+}
+.section_title h2
+{
+	display: inline-block;
+}
+.section_title::after
+{
+	display: block;
+	position: absolute;
+	top: calc(100% + 13px);
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 60px;
+	height: 5px;
+	background: #fe4c50;
+	content: '';
+}
+.timer
+{
+	margin-top: 66px;
+}
+.timer li
+{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	margin-right: 10px;
+}
+.timer li:last-child
+{
+	margin-right: 0px;
+}
+.timer_num
+{
+	font-size: 48px;
+	font-weight: 600;
+	color: #fe4c50;
+	margin-top: 10px;
+}
+.timer_unit
+{
+	margin-top: 12px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #51545f;
+}
+.deal_ofthe_week_button
+{
+	width: 140px;
+	background: #1e1e27;
+	margin-top: 52px;
+}
+.deal_ofthe_week_button:hover
+{
+	background: #2b2b34 !important;
+}
+
+/*********************************
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	h1{font-size: 48px;}
+	h2{font-size: 36px;}
+	.main_slider_content h6
+	{
+		margin-bottom: 23px;
+	}
+	.shop_now_button
+	{
+		margin-top: 26px;
+	}
+	.grid-item
+	{
+		width: 25%;
+	}
+	.top_nav
+	{
+		display: none;
+	}
+	.navbar_menu
+	{
+		display: none;
+	}
+	.hamburger_container
+	{
+		display: block;
+	}
+	.main_slider
+	{
+		margin-top: 100px;
+	}
+	.main_slider_content
+	{
+		width: 100%;
+		padding-right: 15px;
+	}
+	.banner_item
+	{
+		height: 160px;
+	}
+	.banner_category
+	{
+		min-width: 160px;
+		height: 40px;
+	}
+	.banner_category a
+	{
+		font-size: 16px;
+		line-height: 40px;
+	}
+	.product-item
+	{
+		width: 25%;
+	}
+	.deal_ofthe_week_col
+	{
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.deal_ofthe_week_content
+	{
+		position: relative;
+		top: auto;
+		left: auto;
+		height: auto;
+	}
+	.deal_ofthe_week_img
+	{
+		text-align: center;
+	}
+	.timer li
+	{
+		width: 70px;
+		height: 70px;
+	}
+	.timer_num
+	{
+		font-size: 28px;
+	}
+	.timer_unit
+	{
+		margin-top: 1px;
+		font-size: 14px;
+	}
+	.benefit_col
+	{
+		margin-bottom: 30px;
+	}
+	.benefit_col:last-child
+	{
+		margin-bottom: 0px;
+	}
+	.blog_item_col
+	{
+		margin-bottom: 30px;
+	}
+	.blog_item_col:last-child
+	{
+		margin-bottom: 0px;
+	}
+	.blog_item
+	{
+		height: 440px;
+	}
+	.blog_title
+	{
+		font-size: 24px;
+	}
+	.newsletter_text
+	{
+		height: auto;
+		margin-top: 30px;
+	}
+	.newsletter_text p
+	{
+		margin-top: 5px;
+	}
+	.newsletter_form
+	{
+		height: auto;
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+	.footer_nav_container
+	{
+		height: auto;
+		margin-top: 65px;
+	}
+	.footer_social
+	{
+		height: auto;
+		margin-top: 20px;
+		margin-bottom: 65px;
+	}
+}
+
+/* ===================================================================
+ * # TESTIMONIALS
+ *
+ *
+ * ------------------------------------------------------------------- */
+.s-testimonials {
+    padding-top   : var(--vspace-5);
+    padding-bottom: var(--vspace-2_5);
+}
+
+.s-testimonials .testimonials-title {
+    margin-top: 0;
+}
+
+.s-testimonials .swiper-container {
+    padding-bottom: var(--vspace-2);
+}
+
+.s-testimonials .testimonials-slider {
+    margin-top: var(--vspace-2_5);
+}
+
+.testimonials-slider__slide {
+    font-size  : calc(var(--text-size) * 1.1);
+    line-height: calc(1.125 * var(--space));
+    padding-top: var(--vspace-1);
+    border-top : 1px solid var(--color-border);
+    position   : relative;
+}
+
+@media screen and (max-width: 400px) {
+    .testimonials-slider__slide {
+        font-size  : var(--text-base);
+        line-height: var(--vspace-1);
+    }
+}
+
+.testimonials-slider__author {
+    display       : flex;
+    align-items   : center;
+    padding-bottom: var(--vspace-1_5);
+    position      : relative;
+}
+
+.testimonials-slider__avatar {
+    background-color: var(--color-bg-neutral);
+    width           : var(--vspace-2);
+    height          : var(--vspace-2);
+    padding         : var(--vspace-0_25);
+    margin-bottom   : 0;
+    margin-right    : var(--vspace-0_5);
+    border-radius   : 100%;
+    outline         : none;
+}
+
+.testimonials-slider__cite {
+    display    : block;
+    font-family: var(--type-body);
+    font-weight: 500;
+    font-size  : var(--text-sm);
+    line-height: 1.2;
+    position   : relative;
+}
+
+.testimonials-slider__cite span {
+    display    : block;
+    font-weight: 400;
+    font-size  : 0.9em;
+    line-height: 1.2;
+    color      : var(--color-text-light);
+    margin-top : 0.4rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * testimonials
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 800px) {
+    .testimonials-slider__slide {
+        text-align: center;
+    }
+
+    .testimonials-slider__author {
+        justify-content: center;
+    }
+
+    .testimonials-slider__cite {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .s-testimonials {
+        padding-top   : var(--vspace-4);
+        padding-bottom: var(--vspace-3);
+    }
+
+    .s-testimonials .swiper-container {
+        padding-bottom: var(--vspace-1_5);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .testimonials-slider__cite {
+        font-size: calc(var(--text-size) * 0.75);
+    }
+}
+
+
+/* ===================================================================

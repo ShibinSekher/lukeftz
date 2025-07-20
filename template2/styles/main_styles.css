@@ -1684,3 +1684,52 @@ section
 {
 	color: #fe4c50;
 }
+
+.whatsapp-float img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.whatsapp-float {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		/* Normal size */
+	}
+
+	50% {
+		transform: scale(1.2);
+		/* Grow 20% */
+	}
+
+	100% {
+		transform: scale(1);
+		/* Back to normal size */
+	}
+}
+
+/* Apply pulse animation to the image */
+.whatsapp-float img {
+	width: 60px;
+	/* Set the icon size */
+	animation: pulse 2s ease-in-out infinite;
+	/* Pulse effect over 2 seconds */
+	transition: transform 0.3s ease-in-out;
+	/* Smooth transition on hover */
+}
+
+/* Hover effect: scale the icon slightly when hovered */
+.whatsapp-float:hover img {
+	transform: scale(1.1);
+	/* Slightly increase the size on hover */
+}

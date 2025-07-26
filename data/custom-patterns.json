@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Test Pattern 1",
+    "price": 16.64,
+    "image": "images/custom-patterns/FTZ-001.jpg",
+    "category": "women",
+    "label": "New",
+    "detailsImages": []
+  },
+  {
+    "id": 2,
+    "name": "Test Pattern 2",
+    "price": 18.96,
+    "image": "images/custom-patterns/FTZ-002.jpg",
+    "category": "women",
+    "label": "",
+    "detailsImages": []
+  },
+  {
+    "id": 3,
+    "name": "Test Pattern 3",
+    "price": 20.0,
+    "image": "images/custom-patterns/FTZ-003.jpg",
+    "category": "test",
+    "label": "New",
+    "detailsImages": []
+  },
+  {
+    "id": 4,
+    "name": "Test Pattern 4",
+    "price": 22.5,
+    "image": "images/custom-patterns/FTZ-004.jpg",
+    "category": "",
+    "label": "",
+    "detailsImages": []
+  }
+]

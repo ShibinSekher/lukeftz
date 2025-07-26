@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "name": "Esprit Ruffle Shirt",
+    "price": 16.64,
+    "image": "images/product-01.jpg",
+    "category": "women",
+    "label": "New",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Herschel Leather Duffle",
+    "price": 35.31,
+    "image": "images/product-02.jpg",
+    "category": "bag",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Only Check Trouser",
+    "price": 25.5,
+    "image": "images/product-03.jpg",
+    "category": "women",
+    "label": "Sale",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Classic Trench Coat",
+    "price": 75.0,
+    "image": "images/product-04.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Front Pocket Jumper",
+    "price": 34.75,
+    "image": "images/product-05.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Vintage Inspired Classic",
+    "price": 93.2,
+    "image": "images/product-06.jpg",
+    "category": "watches",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Shirt in Stretch Cotton",
+    "price": 52.66,
+    "image": "images/product-07.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Pieces Metallic Printed",
+    "price": 18.96,
+    "image": "images/product-08.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Converse All Star Hi Plimsolls",
+    "price": 75.0,
+    "image": "images/product-09.jpg",
+    "category": "shoes",
+    "label": "New",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Femme T-Shirt In Stripe",
+    "price": 25.85,
+    "image": "images/product-10.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Herschel supply",
+    "price": 63.16,
+    "image": "images/product-11.jpg",
+    "category": "bag",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Classic Trench Coat",
+    "price": 75.0,
+    "image": "images/product-12.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Front Pocket Jumper",
+    "price": 34.75,
+    "image": "images/product-13.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Vintage Inspired Classic",
+    "price": 93.2,
+    "image": "images/product-14.jpg",
+    "category": "watches",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Shirt in Stretch Cotton",
+    "price": 52.66,
+    "image": "images/product-15.jpg",
+    "category": "men",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Pieces Metallic Printed",
+    "price": 18.96,
+    "image": "images/product-16.jpg",
+    "category": "women",
+    "detailsImages": [
+      "images/product-detail-01.jpg",
+      "images/product-detail-02.jpg",
+      "images/product-detail-03.jpg"
+    ]
+  }
+]
